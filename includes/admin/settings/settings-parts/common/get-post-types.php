@@ -1,4 +1,6 @@
 <?php
+defined( 'ABSPATH' ) || exit;
+
 add_action( 'init', 'hound_get_public_post_types' );
 
 function hound_get_public_post_types() {

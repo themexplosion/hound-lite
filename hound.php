@@ -120,26 +120,26 @@ final class Hound {
 		wp_enqueue_style( 'hound-search', HOUND_ASSETS . 'css/hound-frontend.css', array(), HOUND_VERSION );
 
 		// Scripts.
-		wp_enqueue_script( 'hound-search', HOUND_ASSETS . 'js/hound-search.js', array( 'wp-i18n', 'jquery' ), HOUND_VERSION, true );
+		wp_enqueue_script(
+			'hound-search',
+			HOUND_ASSETS . 'js/hound-search.js',
+			array(
+				'wp-i18n',
+				'jquery',
+			),
+			HOUND_VERSION,
+			true
+		);
 		wp_localize_script(
 			'hound-search',
 			'hound_search_params',
 			array(
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'action'  => 'hound_ajax_search',
+				'nonce'   => wp_create_nonce( '_hound_search' ),
 			)
 		);
 	}
 }
 
-/**
- * Initialize the plugin
- *
- * @return \Hound
- */
-function hound() {
-	return Hound::init();
-}
-
-// Kick off the plugin.
-hound();
+Hound::init();

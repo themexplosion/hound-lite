@@ -6,15 +6,16 @@
  * @author Arafat Jamil
  */
 
-spl_autoload_register(
-	function ( $class ) {
-		$class_name = str_replace( 'Hound\\', '\\', $class );
+defined( 'ABSPATH' ) || exit;
 
-		$path = __DIR__ . str_replace( '\\', '/', $class_name ) . '.php';
+spl_autoload_register(
+	function ( $class_name ) {
+		$class_with_namespace = str_replace( 'Hound\\', '\\', $class_name );
+
+		$path = __DIR__ . str_replace( '\\', '/', $class_with_namespace ) . '.php';
 
 		if ( file_exists( $path ) ) {
 			include_once $path;
 		}
 	}
 );
-

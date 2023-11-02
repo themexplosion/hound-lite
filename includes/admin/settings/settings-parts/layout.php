@@ -1,4 +1,6 @@
 <?php
+defined( 'ABSPATH' ) || exit;
+
 CSF::createSection(
 	$prefix,
 	array(
