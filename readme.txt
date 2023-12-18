@@ -23,6 +23,11 @@ Simply install the plugin & activate it. Then navigate to 'Hound' menu option be
 ### **How to customize the search form.**
 Just navigate to Hound > Settings, you will find options to edit the search form. The names are quite intuitive, it is very easy to customize.
 
+### **Beautiful Options Panel.**
+The options panel is very beautiful and easy to use. You will find all the options in one place. You can customize the search form, search results, and many more.
+It is built with [CodeStar Framework](https://github.com/Codestar/codestar-framework), which is a lightweight yet very powerful framework for WordPress plugins.
+The plugin is 100% GPL. It has been integrated google fonts via CDN.
+
 == Installation ==
 
 The usual, automatic way;
