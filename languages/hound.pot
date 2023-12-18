@@ -1,0 +1,109 @@
+# Copyright (C) 2023 Arafat Jamil
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hound - AJAX Search Lite 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hound-lite\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-18T20:57:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: hound\n"
+
+#. Plugin Name of the plugin
+msgid "Hound - AJAX Search Lite"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://themexplosion.com/hound/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Best live search engine for WordPress. Search as you keep typing your keywords. This plugin will take your searching experience to the next level."
+msgstr ""
+
+#. Author of the plugin
+msgid "Arafat Jamil"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/arafatjamil01"
+msgstr ""
+
+#: includes/Admin.php:31
+msgid "Hound - AJAX Search Plugin"
+msgstr ""
+
+#: includes/Admin.php:31
+#: includes/Admin.php:32
+msgid "Hound Search"
+msgstr ""
+
+#: includes/Admin.php:46
+msgid "Hound - AJAX Search Plugin for WordPress"
+msgstr ""
+
+#: includes/Admin.php:47
+msgid "Lite version"
+msgstr ""
+
+#: includes/Admin.php:50
+msgid "The most powerful AJAX search engine for WordPress."
+msgstr ""
+
+#: includes/Admin.php:56
+msgid "Hound Shortcode"
+msgstr ""
+
+#: includes/Admin.php:60
+msgid "Copy Shortcode"
+msgstr ""
+
+#: includes/Admin.php:70
+msgid "Online Documentation"
+msgstr ""
+
+#: includes/Admin.php:74
+msgid "Get Support"
+msgstr ""
+
+#: includes/admin/settings/hound-settings.php:10
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings/hound-settings.php:15
+msgid "Hound - AJAX Search Plugin <small>by Themexplosion</small>"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/export-import.php:8
+msgid "Export/Import"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:8
+msgid "Layout Options"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:18
+msgid "Search Box Styling"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:24
+msgid "Search box padding"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:39
+msgid "Search box margin"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:54
+msgid "Search box placeholder"
+msgstr ""
+
+#: includes/admin/settings/settings-parts/layout.php:55
+#: includes/frontend/views/hound-search-form.php:5
+msgid "Type your keyword..."
+msgstr ""

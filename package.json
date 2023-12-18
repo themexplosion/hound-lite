@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "tailwindcss": "^3.3.3"
-  },
-  "scripts": {  
-    "buildf": "npx tailwindcss -i ./assets/css/base-frontend.css -o ./assets/css/hound-frontend.css --watch",
-    "builda": "npx tailwindcss -i ./assets/css/base-admin.css -o ./assets/css/hound-admin.css --watch"
-  }
-}
