@@ -3,7 +3,7 @@
 Plugin Name:       Hound - AJAX Search Lite
 Plugin URI:        https://themexplosion.com/hound/
 Description:       Best live search engine for WordPress. Search as you keep typing your keywords. This plugin will take your searching experience to the next level.
-Version:           1.0.0
+Version:           1.0.1
 Author:            Arafat Jamil
 Author URI:        https://github.com/arafatjamil01
 License:           GPL v2 or later

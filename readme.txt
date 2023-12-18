@@ -4,7 +4,7 @@ Tags: ajax search, live search, instant search, post search, search blog
 Requires at least: 5.0
 Requires PHP: 7.4
 Tested up to: 6.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,11 +44,6 @@ Or if needed, install manually;
 3. Open WordPress admin - Plugins and click "Activate" next to the plugin
 4. Activate & open plugin's settings from Media > Increase Maximum Upload Limit
 
-== Changelog ==
-1.0.0
--------------
-* Initial Release
-
 == Frequently Asked Questions ==
 
 = Does this plugin work with all themes? =
@@ -57,3 +52,13 @@ Yes, it works with all themes.
 
 = Do I need to know coding to use this plugin? =
 No, but knowledge in how to use short code will definitely help.
+
+== Changelog ==
+
+= 1.0.1 - 19/12/2023 =
+- New: POT file introduced for translation
+- Enhanced: Support and documentation links added
+- Fixed: CSS conflict with other themes
+
+= 1.0.0 - 16/12/2023 =
+- Initial release
