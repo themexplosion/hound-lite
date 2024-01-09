@@ -1,23 +1,21 @@
-(function () {
+(function ($) {
 	"use strict";
 
-	// Click the 'Copy shortcode' button to copy a shortcode.
-	const clickToCopyButton = document.getElementById('hound-copy-shortcode');
-	clickToCopyButton && clickToCopyButton.addEventListener('click', copyToClipboard);
+	$(document).ready(function() {
+		$('#hound-copy-shortcode').on('click', function(e) {
+			e.preventDefault();
+			var copyText = $('#hound-shortcode');
+			copyText.select();
+			document.execCommand("copy");
+			var button = $(this);
+			button.text('Successfully copied');
+			button.css('background-color', 'green').css('border-color', 'green');
 
-	//Function to select and copy the value from the input field to clipboard.
-	function copyToClipboard(e) {
-		e.preventDefault();
-
-		let inputFieldValue = document.getElementById("hound-shortcode");
-
-		// Select the text field.
-		inputFieldValue.select();
-		inputFieldValue.setSelectionRange(0, 99999);// For mobile devices
-
-		// Copy the text inside the text field.
-		navigator.clipboard.writeText(inputFieldValue.value);
-		clickToCopyButton.classList.add('hound-copy-shortcode-success');
-		clickToCopyButton.innerText = "Successfully copied";
-	}
-})();
+			setTimeout(function() {
+				button.text('Copy Shortcode');
+				button.css('background-color', '').css('border-color','');
+				copyText.blur();
+			}, 5000);
+		});
+	});
+})(jQuery);
