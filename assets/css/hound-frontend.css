@@ -58,3 +58,7 @@
   -webkit-appearance: none;
   appearance: none;
 }
+
+.mb-30 {
+  margin-bottom: 30px;
+}
