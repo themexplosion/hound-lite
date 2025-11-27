@@ -43,8 +43,6 @@ final class Hound {
 		add_action( 'admin_menu', array( $this, 'hound_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_admin_assets' ), 20 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_frontend_assets' ), 20 );
-
-		add_action( 'rest_api_init', array( $this, 'register_rest_routes' ) );
 	}
 
 	/**
@@ -129,7 +127,7 @@ final class Hound {
 	 * @return void
 	 */
 	public function load_plugin_views() {
-		new \Hound\includes\Admin();
+		new \Hound\includes\Hound_REST_API();
 		new \Hound\includes\Frontend();
 
 		new \Hound\includes\AJAX_Handler();
@@ -165,7 +163,7 @@ final class Hound {
 
 		if ( file_exists( $css_path ) ) {
 			wp_enqueue_style(
-				'rwg-dashboard-css',
+				'hound-dashboard-css',
 				plugins_url( 'assets/css/hound-dashboard.min.css', __FILE__ ),
 				array(),
 				filemtime( $css_path )
@@ -177,7 +175,7 @@ final class Hound {
 			'houndDom',
 			array(
 				'rootId'  => 'hound-dashboard-root',
-				'restUrl' => esc_url_raw( rest_url( 'rwg/v1/' ) ),
+				'restUrl' => esc_url_raw( rest_url( 'hound/v1/' ) ),
 				'nonce'   => wp_create_nonce( 'wp_rest' ),
 				'user'    => wp_get_current_user()->user_login,
 				'site'    => get_site_url(),

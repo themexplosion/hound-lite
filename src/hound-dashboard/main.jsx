@@ -6,7 +6,7 @@ import '../styles.css'; // Import Tailwind CSS
 import HoundDashboard from './HoundDashboard';
 
 // Render into a DOM node you'll place via PHP or template
-const mount = document.getElementById('hound-dashboard-root');
+const mount = document.getElementById(houndDom.rootId);
 if (mount) {
 	const root = createRoot(mount);
 	root.render(<HoundDashboard />);

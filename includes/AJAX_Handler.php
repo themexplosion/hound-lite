@@ -1,5 +1,4 @@
 <?php
-
 namespace Hound\includes;
 
 class AJAX_Handler {

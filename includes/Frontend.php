@@ -4,7 +4,6 @@ namespace Hound\includes;
 class Frontend {
 	public function __construct() {
 		add_shortcode( 'themexplosion_hound', array( $this, 'search_shortcode' ) );
-		add_shortcode( 'hound', array( $this, 'hound_shortcode' ) );
 	}
 
 	/**
@@ -25,12 +24,5 @@ class Frontend {
 		require_once HOUND_DIR . 'includes/frontend/views/hound-search-form.php';
 
 		return $form;
-	}
-
-	/**
-	 * Frontend search form.
-	 */
-	public function hound_shortcode() {
-		return '<div>Hi there</div>';
 	}
 }
