@@ -1,17 +1,1 @@
-
 @import "tailwindcss";
-
-/* Optional: CSS-first theme tokens in v4 */
-@theme {
-  --color-brand-600: #2563eb;
-}
-
-/* Admin container styling */
-#rwg-dashboard-root {
-  /* v4 encourages CSS-first customization via @theme + utilities */
-  @apply bg-white border border-gray-200 p-6 rounded-md;
-}
-
-.pb-20{
-  padding-bottom: 20px;
-}

@@ -1,2 +1,30 @@
+# Dependencies
 node_modules/
-testfile.php
+
+# Build outputs - WordPress plugin specific
+assets/
+dist/
+*.min.js
+*.min.css
+
+# Development logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# WordPress specific
+*.log

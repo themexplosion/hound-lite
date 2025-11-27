@@ -13,9 +13,11 @@ Domain Path:       /languages/
 
 namespace Hound;
 
+use WP_REST_Response;
+
 defined( 'ABSPATH' ) || exit;
 
-// Automatically load all the classes
+// Automatically load all the classes.
 require_once __DIR__ . '/autoload.php';
 
 /**
@@ -69,8 +71,6 @@ final class Hound {
 
 	/**
 	 *  Initializing Hound class
-	 *
-	 * @return \Hound
 	 */
 	public static function init() {
 		static $instance = false;
@@ -149,14 +149,14 @@ final class Hound {
 
 		$dev_server = defined( 'WP_DEV_SERVER' ) ? WP_DEV_SERVER : '';
 
-		// Load built assets from /dist.
-		$js_path = HOUND_DIR . 'dist/assets/main.js';
-		$css_path = HOUND_DIR . 'dist/assets/main.css';
+		// Load built assets from /assets.
+		$js_path  = HOUND_DIR . 'assets/js/hound-dashboard.min.js';
+		$css_path = HOUND_DIR . 'assets/css/hound-dashboard.min.css';
 
 		if ( file_exists( $js_path ) ) {
 			wp_enqueue_script(
 				self::HANDLE,
-				plugins_url( 'dist/assets/main.js', __FILE__ ),
+				plugins_url( 'assets/js/hound-dashboard.min.js', __FILE__ ),
 				array(),
 				filemtime( $js_path ),
 				true
@@ -166,7 +166,7 @@ final class Hound {
 		if ( file_exists( $css_path ) ) {
 			wp_enqueue_style(
 				'rwg-dashboard-css',
-				plugins_url( 'dist/assets/main.css', __FILE__ ),
+				plugins_url( 'assets/css/hound-dashboard.min.css', __FILE__ ),
 				array(),
 				filemtime( $css_path )
 			);
@@ -184,7 +184,6 @@ final class Hound {
 			)
 		);
 	}
-
 
 	/**
 	 * Load Frontend css files and scripts.
@@ -221,25 +220,7 @@ final class Hound {
 	 * Register REST API routes.
 	 */
 	public function register_rest_routes() {
-		register_rest_route(
-			'rwg/v1',
-			'/stats',
-			array(
-				'methods'             => 'GET',
-				'permission_callback' => function () {
-					return current_user_can( 'manage_options' ); },
-				'callback'            => function () {
-					return new WP_REST_Response(
-						array(
-							'users' => wp_count_users(),
-							'posts' => wp_count_posts(),
-							'time'  => current_time( 'mysql' ),
-						),
-						200
-					);
-				},
-			)
-		);
+		// register_rest_route();
 	}
 }
 
